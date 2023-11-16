@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список игроков</title>
+</head>
+<body>
+    <h1>Список игроков</h1>
+    <ul>
+        {% for player in players %}
+            <li><a href="{% url 'player_detail' player.pk %}">{{ player.first_name }} {{ player.last_name }}</a> ({{ player.club }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

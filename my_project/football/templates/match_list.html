@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список матчей</title>
+</head>
+<body>
+    <h1>Список матчей</h1>
+    <ul>
+        {% for match in matches %}
+            <li><a href="{% url 'match_detail' match.pk % %}">{{ match.home_team }} vs. {{ match.away_team }}</a> ({{ match.date }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

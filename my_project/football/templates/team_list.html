@@ -1,0 +1,16 @@
+<!-- football/templates/team_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список команд</title>
+</head>
+<body>
+    <h1>Список команд</h1>
+    <ul>
+        {% for team in teams %}
+            <li><a href="{% url 'team_detail' team.pk %}">{{ team.name }}</a> ({{ team.country }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
